@@ -1,2 +1,2 @@
 # phoebus-olog-kafka-integration
-Optional message dispatcher add-on
+Optional Olog message dispatcher add-on
