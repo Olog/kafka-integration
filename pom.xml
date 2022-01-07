@@ -31,7 +31,8 @@
     </developers>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/Olog/phoebus-olog-kafka-integration</developerConnection>
+        <connection>scm:git:ssh://github.com/Olog/phoebus-olog-kafka-integration</connection>
+        <developerConnection>scm:git:ssh://github.com/Olog/phoebus-olog-kafka-integration</developerConnection>
         <url>https://github.com/Olog/phoebus-olog-kafka-integration/tree/master</url>
         <tag>HEAD</tag>
     </scm>
