@@ -31,9 +31,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/Olog/phoebus-olog-kafka-integration.git</connection>
+        <connection>scm:git:ssh://github.com/Olog/phoebus-olog-kafka-integration.git</connection>
         <developerConnection>scm:git:ssh://github.com/Olog/phoebus-olog-kafka-integration.git</developerConnection>
-        <url>https://github.com/Olog/phoebus-olog-kafka-integrationL 2020-001828/tree/master</url>
+        <url>https://github.com/Olog/phoebus-olog-kafka-integration/tree/master</url>
     </scm>
 
     <build>
