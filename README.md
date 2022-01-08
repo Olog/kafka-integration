@@ -19,7 +19,7 @@ The Kafka message payload that subscribers will receive is a JSON-formatted obje
   "logbooks":["logbook1", "logbook2"],
   "title":"Log Entry Title",
   "author":"John Doe",
-  "body":""Log entry body"
+  "body":"Log entry body"
 }
 ```
 
