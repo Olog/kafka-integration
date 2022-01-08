@@ -4,8 +4,8 @@
     <groupId>org.phoebus</groupId>
     <artifactId>olog-kafka-integration</artifactId>
     <version>1.0.1-SNAPSHOT</version>
-
-    <description>Kafka message dispatcher for Phoebus Olog.</description>
+    <name>Phoebus Olog Kafka Integration</name>
+    <description>Kafka message dispatcher for Phoebus Olog</description>
     <url>https://github.com/Olog/phoebus-olog-kafka-integration</url>
     <licenses>
         <license>
