@@ -6,8 +6,7 @@ appropriate action when new log entries are created.
 
 ## Prerequisites
 
-In order for this module to act as a Kafka producer, a Kafka message broker must be available on the endpoint address defined in the runtime property 
-"kafka.bootstrap.servers", e.g. localhost:9092.
+In order for this module to act as a Kafka producer, a Kafka message broker must be available on the endpoint address defined in the runtime property ``kafka.bootstrap.servers``, e.g. localhost:9092.
 
 ## Message structure
 
@@ -26,5 +25,5 @@ The Kafka message payload that subscribers will receive is a JSON-formatted obje
 The url field is useful only if a Phoebus Olog web client has been deployed, see https://github.com/Olog/phoebus-olog-web-client. A subscriber client can use this 
 url to present a direct link to the created log entry. 
 
-The actual address and port of the Phoebus Olog web client is configured in the runtime property "olog.web.rootURL".
+The actual address and port of the Phoebus Olog web client is configured in the runtime property ``olog.web.rootUR``.
 
