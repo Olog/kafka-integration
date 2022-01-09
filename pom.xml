@@ -72,16 +72,11 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>3.0.0-M5</version>
-            </plugin>
         </plugins>
     </build>
 
     <properties>
-        <service-olog.version>2.0.1</service-olog.version>
+        <service-olog.version>2.0.2</service-olog.version>
         <junit.version>4.13.2</junit.version>
         <kafka-version>2.0.0</kafka-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
