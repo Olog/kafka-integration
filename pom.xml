@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.phoebus</groupId>
     <artifactId>olog-kafka-integration</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <name>Phoebus Olog Kafka Integration</name>
     <description>Kafka message dispatcher for Phoebus Olog</description>
     <url>https://github.com/Olog/phoebus-olog-kafka-integration</url>
@@ -32,7 +32,7 @@
         <connection>scm:git:https://github.com/Olog/phoebus-olog-kafka-integration.git</connection>
         <developerConnection>scm:git:https://github.com/Olog/phoebus-olog-kafka-integration.git</developerConnection>
         <url>https://github.com/Olog/phoebus-olog-kafka-integration/tree/master</url>
-        <tag>HEAD</tag>
+        <tag>olog-kafka-integration-1.0.3</tag>
     </scm>
 
     <build>
