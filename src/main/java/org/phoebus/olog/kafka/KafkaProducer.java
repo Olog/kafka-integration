@@ -77,15 +77,19 @@ public class KafkaProducer {
      * {@link Producer}.
      */
     private KafkaProducer() {
-        Properties properties = new Properties();
-        try {
-            properties.load(getClass().getResourceAsStream("/kafka_integration_config.properties"));
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Unable to load configuration.", e);
-            return;
+        bootstrapServers = System.getenv("KAFKA_BOOTSTRAP_SERVERS");
+        if(bootstrapServers == null){
+            logger.log(Level.INFO, "KAFKA_BOOTSTRAP_SERVERS not found in system environment, using system property or properties file");
+            Properties properties = new Properties();
+            try {
+                properties.load(getClass().getResourceAsStream("/kafka_integration_config.properties"));
+            } catch (IOException e) {
+                logger.log(Level.SEVERE, "Unable to load configuration.", e);
+                return;
+            }
+            bootstrapServers = System.getProperty("kafka.bootstrap.servers",
+                    properties.getProperty("kafka.bootstrap.servers"));
         }
-        bootstrapServers = System.getProperty("kafka.bootstrap.servers",
-                properties.getProperty("kafka.bootstrap.servers"));
         logger.log(Level.INFO, "Using Kafka bootstrap servers: " + bootstrapServers);
         discoverAndCreateTopic();
 

@@ -38,15 +38,19 @@ public class KafkaNotifier implements LogEntryNotifier {
     }
 
     public void configure(){
-        Properties properties = new Properties();
-        try {
-            properties.load(getClass().getResourceAsStream("/kafka_integration_config.properties"));
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Unable to load configuration.", e);
-            return;
+        ologRootURL = System.getenv("OLOG_ROOT_URL");
+        if(ologRootURL == null){
+            logger.log(Level.INFO, "OLOG_ROOT_URL not found in system environment, using system property or properties file");
+            Properties properties = new Properties();
+            try {
+                properties.load(getClass().getResourceAsStream("/kafka_integration_config.properties"));
+            } catch (IOException e) {
+                logger.log(Level.SEVERE, "Unable to load configuration.", e);
+                return;
+            }
+            ologRootURL = System.getProperty("olog.web.rootURL",
+                    properties.getProperty("olog.web.rootURL"));
         }
-        ologRootURL = System.getProperty("olog.web.rootURL",
-                properties.getProperty("olog.web.rootURL"));
         logger.log(Level.INFO, "Using Olog web root URL: " + ologRootURL);
         kafkaProducer = KafkaProducer.getInstance();
     }
